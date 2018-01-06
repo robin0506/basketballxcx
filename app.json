@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/ranking/ranking",
+    "pages/rule/rule",
+    "pages/theme/detail",
+    "pages/goods/goods",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/player/player",
+    "pages/order/order",
+    "pages/match1v1Ready/match1v1Ready",
+    "pages/match1v1Start/match1v1Start"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0068C4",
+    "navigationBarTitleText": "野球战场",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+
+"tabBar": {
+  "borderStyle": "white",
+  "position": "bottom",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/tab/home.png",
+      "selectedIconPath": "images/tab/home_selected.png"
+    },
+
+    {
+      "pagePath": "pages/ranking/ranking",
+      "text": "排行榜",
+      "iconPath": "images/tab/skill.png",
+      "selectedIconPath": "images/tab/skill_selected.png"
+    },
+    {
+      "pagePath": "pages/rule/rule",
+      "text": "规则",
+      "iconPath": "images/tab/skill.png",
+      "selectedIconPath": "images/tab/skill_selected.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "images/tab/skill.png",
+      "selectedIconPath": "images/tab/skill_selected.png"
+    }
+  ]
+}
+  
+}

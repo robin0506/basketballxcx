@@ -1,0 +1,54 @@
+<!--pages/ranking/ranking.wxml-->
+<view class="top-tab flex-wrp flex-tab " >
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<scroll-view scroll-y="true" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" class="container discovery withtab"   upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-top="{{scrollTop}}">
+
+ <view class="ctnt0" hidden="{{currentNavtab==0 ? '' : true}}">
+      <view class="search flex-wrp">
+      <view class="search-left flex-item">
+          <image src="../../images/search.png"></image>
+          <input placeholder="搜索球员" placeholder-class="search-placeholder"/>
+      </view>
+      <view class="search-right flex-item" bindtap="upper">
+          <image src="../../images/lighting.png"></image>
+      </view>
+  </view>
+    <view class="nav_section">
+        <block wx:for="{{players}}" wx:key="item.id">
+            <view class="nav_section_items" bindtap="navigateDetail" data-aid="{{item.id}}">
+                <!--image-->
+                <view class="section_image" >
+                <block >
+                    <image src="{{item.img}}" mode="aspectFill"></image>
+                </block>
+
+                </view>
+                <!--content-->
+                <view class="section_cont" >
+                    <view class="section_cont_sub">
+                        <text>{{item.club}}</text>
+                    </view>
+                    <view class="section_cont_price" style="color:#000">{{item.name}}<text class="section_cont_price">  {{item.price}}</text></view>
+                    <view>{{item.message}}</view>
+                </view>
+                <!--book-->
+                <view class="section_book" >
+                        <view>奖励</view>
+                </view>
+            </view>
+            
+        </block>
+    </view> 
+</view>
+</scroll-view>
+
+        <view>  
+            <loading hidden="{{hidden}}" bindchange="loadingChange">  
+            加载中...  
+            </loading>  
+        </view> 
+        
+   

@@ -1,0 +1,26 @@
+<!--index.wxml-->
+ 
+<swiper class="activity" indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{soccerPics}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+     <view class="box" >
+            <text  class="text4">{{title}}</text>   
+            <text class="text2">{{players}} {{playersNum}}</text>
+            <text  class="text3">{{match}}   {{matchCount}} </text>
+    </view>  
+    <view class="ar_cont">
+<button class="ar_book" bindtap="bindToastTap1V1">1V1开战</button>
+        <button class="ar_book" bindtap="bindToastTap3V3">3V3开战</button>
+          <button class="ar_book" bindtap="bindToastTap4V4">4V4开战</button>
+          openid = {{openid}}
+        <!-- <toast hidden="{{bookToastHidden}}"  bindchange="hideToast">
+        预定成功
+        </toast> -->
+    </view>
+    <!-- <camera hidden="true"  binderror="error"  display="none"></camera> -->

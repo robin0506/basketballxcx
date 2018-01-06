@@ -1,0 +1,46 @@
+<modal hidden="{{hiddenmodalput}}" title="请瞄准人脸：）" confirm-text="拍照" cancel-text="切换" bindcancel="qiehuan" bindconfirm="takePhoto">  
+   <camera device-position="{{position}}" flash="off" binderror="error" style="width: 100%; height: 300px;" display="none"></camera>
+</modal> 
+
+<view class="container_user">
+  <view class="user_base_info">
+    <view class="user_avatar" >
+        <image src="{{result.players[0].faceurl}}"></image>
+        <button bindtap="becomeMarker" data-statu="open">计分</button>
+    </view>
+    <view class="user_info">
+      <text>
+         昵称：{{result.players[0].nickname}} 
+         实力值：{{result.players[0].power}}
+      </text>
+    </view>
+  </view>
+  <view class="user_base_info">
+    <view class="user_avatar">
+        <image src="{{result.players[1].faceurl}}"></image>
+          <button bindtap="becomePlayer1">球员1</button>
+    </view>
+    <view class="user_info">
+      <text>
+          昵称：{{result.players[1].nickname}} 
+         实力值：{{result.players[1].power}} 
+      </text>
+    </view>
+  </view>
+    <view class="user_base_info">
+    <view class="user_avatar">
+        <image src="{{result.players[2].faceurl}}"></image>
+          <button bindtap="becomePlayer2">球员2</button>
+    </view>
+    <view class="user_info">
+      <text>
+        昵称：{{result.players[2].nickname}} 
+         实力值：{{result.players[2].power}} 
+      </text>
+    </view>
+  </view>
+
+  <button bindtap="startMatch">开始比赛</button>
+</view>
+
+

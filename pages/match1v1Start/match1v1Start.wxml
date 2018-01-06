@@ -1,0 +1,15 @@
+<text>\n\n时间：{{time}}</text>
+<button type="primary" bindtap="start" disabled="{{startDisabled}}">开始比赛</button>
+
+<text>\n\n投篮：{{result.players[1].shoot}}</text>
+<text>\n\n比分：{{result.players[1].score}}</text>
+<button type="primary" bindtap="shoot1">1投篮</button>
+<button type="primary" bindtap="score1">1得分</button>
+
+<text>\n\n投篮：{{result.players[2].shoot}}</text>
+<text>\n\n比分：{{result.players[2].score}}</text>
+<button type="primary" bindtap="shoot2">2投篮</button>
+<button type="primary" bindtap="score2">2得分</button>
+
+
+
